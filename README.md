@@ -30,9 +30,7 @@ flight = polymer.Flight("A320")
 
 flight.plot()
 ```
-<div style="max-width: 400px">
 ![a320_model](./plots/a320_model.png)
-</div>
 
 ## Install
 
