@@ -21,6 +21,18 @@ flight.fuel(distance=2000)
 flight.co2(distance=2000)
 ```
 
+Visualize the actual model
+
+```python
+from openap import polymer
+
+flight = polymer.Flight("A320")
+
+flight.plot()
+```
+<div style="max-width: 400px">
+![a320_model](./plots/a320_model.png)
+</div>
 
 ## Install
 

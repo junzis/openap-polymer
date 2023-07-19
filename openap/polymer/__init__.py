@@ -56,4 +56,7 @@ class Flight:
         import seaborn as sns
 
         sns.lineplot(data=self.data, x="distance", y="predict", hue="mass")
+        plt.xlabel("Distance (km)")
+        plt.ylabel("Fuel (kg)")
+        plt.legend(title="mass (kg)")
         plt.show()
