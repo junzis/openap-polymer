@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "openap-polymer"
-version = "1.1"
+version = "0.1"
 description = "OpenAP Polynomial Model for Emission Research"
 authors = ["Junzi Sun <j.sun-1@tudelft.nl>"]
 license = "GNU Lesser General Public License v3 (LGPLv3)"
 readme = "README.md"
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
@@ -33,3 +33,7 @@ profile = "black"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+homepage = "https://github.com/junzis/openap-polymer"
+repository = "https://github.com/junzis/openap-polymer"

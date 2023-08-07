@@ -1,14 +1,11 @@
 # %%
 import os
-import time
 import click
 import itertools
 import warnings
 from pathlib import Path
 from tqdm import tqdm
-import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pdint
 import openap
 import pandas as pd
 from openap import top
@@ -18,9 +15,9 @@ from multiprocessing import current_process
 
 warnings.filterwarnings("ignore")
 
-#%%
-def generate_ac(ac, overwrite=True):
 
+# %%
+def generate_ac(ac, overwrite=True):
     dir = Path(__file__).resolve().parent.parent
     fout = f"{dir}/data/{ac}.csv"
 
@@ -70,6 +67,7 @@ def generate_ac(ac, overwrite=True):
                 continue
 
             total_fuel = flight.fuel.sum()  # kg
+            total_time = flight.ts.iloc[-1] / 60  # minutes
 
             results.append(
                 dict(
@@ -78,6 +76,7 @@ def generate_ac(ac, overwrite=True):
                     mass=int(round(m * m_mtow, -1)),
                     distance=int(d),
                     fuel=int(round(total_fuel, -1)),
+                    time=int(round(total_time)),
                 )
             )
 
@@ -100,6 +99,6 @@ def main(ac, overwrite):
         generate_ac(ac, overwrite)
 
 
-#%%
+# %%
 if __name__ == "__main__":
     main()
